@@ -9,7 +9,7 @@ import com.kata.model.enums.PlayerEnum;
 
 public class DefaultGameScoreCalculator implements ScoreCalculator {
 
-    private MatchScoreEntity matchScore;
+    protected MatchScoreEntity matchScore;
 
     public DefaultGameScoreCalculator(MatchScoreEntity matchScore) {
         this.matchScore = matchScore;

@@ -9,8 +9,8 @@ import org.slf4j.LoggerFactory;
 
 public class DefaultGameScoreViewer implements ScoreViewer {
     private static final Logger logger = LoggerFactory.getLogger(DefaultGameScoreViewer.class);
-    public ScoreCalculator scoreCalculator;
-    private MatchScoreEntity matchScore;
+    protected ScoreCalculator scoreCalculator;
+    protected MatchScoreEntity matchScore;
 
     public DefaultGameScoreViewer(ScoreCalculator scoreCalculator) {
         this.scoreCalculator = scoreCalculator;

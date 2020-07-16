@@ -18,10 +18,9 @@ public class TennisMatchImpl implements TennisMatch {
 
     @Override
     public void winPoint(PlayerEnum player) throws MatchWrongStateException {
-        if(isMatchFinished()) {
+        if (isMatchFinished()) {
             throw new MatchWrongStateException(MatchWrongStateException.MatchFinishedException);
-        }
-        else {
+        } else {
             scoreCalculator.calculateScore(player);
             scoreViewer.displayScore();
         }
