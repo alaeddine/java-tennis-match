@@ -6,19 +6,25 @@ import com.kata.model.enums.PlayerEnum;
 /**
  * calculate the score for a tennis match and indicates if the is a winner.
  */
-public interface ScoreCalculator {
+public abstract class ScoreCalculator {
     /**
      * calculate the new score when the given player win a new point.
      *
      * @param player : player that win a new point
      */
-    void calculateScore(PlayerEnum player);
+    public abstract  void calculateScore(PlayerEnum player);
 
-    PlayerEnum getWinner();
+    public abstract PlayerEnum getWinner();
 
-    boolean hasWinner();
+    public abstract boolean  hasWinner();
 
-    MatchScoreEntity getMatchScore();
+    public abstract MatchScoreEntity getMatchScore();
 
-    String getWinnerName();
+    public String getWinnerName() {
+        if (hasWinner()) {
+            return getWinner() == PlayerEnum.PLAYER1 ?
+                    getMatchScore().getPlayer1() : getMatchScore().getPlayer2();
+        }
+        return PlayerEnum.NO_ONE.toString();
+    }
 }

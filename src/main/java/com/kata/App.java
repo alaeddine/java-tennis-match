@@ -27,7 +27,9 @@ public class App {
         String player2 = scanner.nextLine();
 
         //
-        logger.info("Enter 1 to execute sprint1_uc1 \n  and 2 to execute sprint1_uc2 \n");
+        logger.info("Enter 1 to execute sprint1_uc1 \n" +
+                    "or    2 to execute sprint1_uc2 \n" +
+                    "or    3 to execute sprint2_uc1 \n");
         int appVersion = Integer.parseInt(scanner.nextLine());
         // init app
         TennisMatch tennisMatch = buildApp(appVersion, player1, player2);
@@ -73,6 +75,10 @@ public class App {
             case 2:
                 scoreCalculator = new DeuceGameScoreCalculator(matchScore);
                 scoreViewer = new DeuceGameScoreViewer(scoreCalculator);
+                break;
+            case 3:
+                scoreCalculator = new SetScoreCalculator(new DeuceGameScoreCalculator(matchScore), matchScore);
+                scoreViewer = new SetScoreViewer(scoreCalculator, matchScore);
         }
 
         return new TennisMatchImpl(scoreCalculator, scoreViewer);
