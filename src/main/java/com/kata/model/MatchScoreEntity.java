@@ -10,6 +10,7 @@ public class MatchScoreEntity {
     private PlayerEnum matchWinner;
     private MatchStatusEnum matchStatus = MatchStatusEnum.STARTED;
     private GameScoreEntity currentGameScore = new GameScoreEntity();
+    private SetScoreEntity currentSetScore = new SetScoreEntity();
     private String player1;
     private String player2;
 
@@ -56,5 +57,13 @@ public class MatchScoreEntity {
 
     public void setPlayer2(String player2) {
         this.player2 = player2;
+    }
+
+    public SetScoreEntity getCurrentSetScore() {
+        return currentSetScore;
+    }
+
+    public void setCurrentSetScore(SetScoreEntity currentSetScore) {
+        this.currentSetScore = currentSetScore;
     }
 }

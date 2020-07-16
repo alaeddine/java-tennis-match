@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.kata.model.GameScoreEntity</OriginalElement>
+  <nodes>
+    <node x="344.0" y="211.0">com.kata.businessImpl.SetScoreCalculator</node>
+    <node x="361.0" y="822.0">com.kata.App</node>
+    <node x="226.0" y="645.0">com.kata.businessImpl.SetScoreViewer</node>
+    <node x="689.0" y="542.0">com.kata.model.SetScoreEntity</node>
+    <node x="127.0" y="542.0">com.kata.business.ScoreViewer</node>
+    <node x="610.0" y="0.0">com.kata.business.TennisMatch</node>
+    <node x="0.0" y="822.0">com.kata.model.GameScoreEntity</node>
+    <node x="0.0" y="645.0">com.kata.businessImpl.DefaultGameScoreViewer</node>
+    <node x="0.0" y="400.0">com.kata.businessImpl.DeuceGameScoreCalculator</node>
+    <node x="421.0" y="542.0">com.kata.model.MatchScoreEntity</node>
+    <node x="220.0" y="0.0">com.kata.business.ScoreCalculator</node>
+    <node x="89.0" y="211.0">com.kata.businessImpl.DefaultGameScoreCalculator</node>
+    <node x="610.0" y="167.0">com.kata.businessImpl.TennisMatchImpl</node>
+    <node x="7.5" y="748.0">com.kata.businessImpl.DeuceGameScoreViewer</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.kata.businessImpl.DeuceGameScoreViewer" target="com.kata.businessImpl.DefaultGameScoreViewer">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="com.kata.businessImpl.TennisMatchImpl" target="com.kata.business.TennisMatch">
+      <point x="0.0" y="-58.5" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="com.kata.businessImpl.DefaultGameScoreViewer" target="com.kata.business.ScoreViewer">
+      <point x="0.0" y="-26.5" />
+      <point x="103.0" y="620.0" />
+      <point x="164.5" y="620.0" />
+      <point x="-37.5" y="26.5" />
+    </edge>
+    <edge source="com.kata.businessImpl.DeuceGameScoreCalculator" target="com.kata.businessImpl.DefaultGameScoreCalculator">
+      <point x="0.0" y="-48.5" />
+      <point x="0.0" y="69.5" />
+    </edge>
+    <edge source="com.kata.businessImpl.DefaultGameScoreCalculator" target="com.kata.business.ScoreCalculator">
+      <point x="0.0" y="-69.5" />
+      <point x="206.5" y="186.0" />
+      <point x="275.25" y="186.0" />
+      <point x="-55.25" y="80.5" />
+    </edge>
+    <edge source="com.kata.businessImpl.SetScoreViewer" target="com.kata.business.ScoreViewer">
+      <point x="0.0" y="-26.5" />
+      <point x="301.0" y="620.0" />
+      <point x="239.5" y="620.0" />
+      <point x="37.5" y="26.5" />
+    </edge>
+    <edge source="com.kata.businessImpl.SetScoreCalculator" target="com.kata.business.ScoreCalculator">
+      <point x="0.0" y="-69.5" />
+      <point x="454.5" y="186.0" />
+      <point x="385.75" y="186.0" />
+      <point x="55.25" y="80.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5749235474006117" x="457.0" y="480.49999999999994" />
+  <SelectedNodes>
+    <node>com.kata.model.GameScoreEntity</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

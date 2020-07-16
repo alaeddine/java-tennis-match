@@ -7,7 +7,7 @@ import com.kata.model.enums.GameScoreEnum;
 import com.kata.model.enums.PlayerEnum;
 
 
-public class DefaultGameScoreCalculator implements ScoreCalculator {
+public class DefaultGameScoreCalculator extends ScoreCalculator {
 
     protected MatchScoreEntity matchScore;
 
@@ -47,15 +47,6 @@ public class DefaultGameScoreCalculator implements ScoreCalculator {
     @Override
     public MatchScoreEntity getMatchScore() {
         return matchScore;
-    }
-
-    @Override
-    public String getWinnerName() {
-        if (hasWinner()) {
-            return getWinner() == PlayerEnum.PLAYER1 ?
-                    matchScore.getPlayer1() : matchScore.getPlayer2();
-        }
-        return PlayerEnum.NO_ONE.toString();
     }
 
 }
