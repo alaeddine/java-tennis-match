@@ -4,7 +4,7 @@ in this example it was require not to use any  java framework also no persistenc
 of the project is to be as simple as possible, only one rule: a good clear design.
 
 # project specification
-* see the document (___specification.docs___)[./specification.docx] in the project root. 
+* see the document [___specification.docx___](./specification.docx) in the project root. 
 
 ### how to run it ?
 * mvn clean install
